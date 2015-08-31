@@ -34,11 +34,11 @@
             this.itemMenuSave = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.itemMenuQuit = new System.Windows.Forms.ToolStripMenuItem();
-            this.richTextBoxASM = new System.Windows.Forms.RichTextBox();
             this.affichageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.numérotationDesLignesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.itemMenuWithLine = new System.Windows.Forms.ToolStripMenuItem();
             this.itemMenuWithoutLine = new System.Windows.Forms.ToolStripMenuItem();
+            this.richTextBoxASM = new System.Windows.Forms.RichTextBox();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,14 +60,14 @@
             this.toolStripSeparator1,
             this.itemMenuQuit});
             this.fichierToolStripMenuItem.Name = "fichierToolStripMenuItem";
-            this.fichierToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
-            this.fichierToolStripMenuItem.Text = "Fichier";
+            this.fichierToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fichierToolStripMenuItem.Text = "File";
             // 
             // itemMenuSave
             // 
             this.itemMenuSave.Name = "itemMenuSave";
             this.itemMenuSave.Size = new System.Drawing.Size(152, 22);
-            this.itemMenuSave.Text = "Enregistrer";
+            this.itemMenuSave.Text = "Save";
             this.itemMenuSave.Click += new System.EventHandler(this.itemMenuSave_Click);
             // 
             // toolStripSeparator1
@@ -79,8 +79,41 @@
             // 
             this.itemMenuQuit.Name = "itemMenuQuit";
             this.itemMenuQuit.Size = new System.Drawing.Size(152, 22);
-            this.itemMenuQuit.Text = "Quitter";
+            this.itemMenuQuit.Text = "Close";
             this.itemMenuQuit.Click += new System.EventHandler(this.itemMenuQuit_Click);
+            // 
+            // affichageToolStripMenuItem
+            // 
+            this.affichageToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.numérotationDesLignesToolStripMenuItem});
+            this.affichageToolStripMenuItem.Name = "affichageToolStripMenuItem";
+            this.affichageToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+            this.affichageToolStripMenuItem.Text = "Display";
+            // 
+            // numérotationDesLignesToolStripMenuItem
+            // 
+            this.numérotationDesLignesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.itemMenuWithLine,
+            this.itemMenuWithoutLine});
+            this.numérotationDesLignesToolStripMenuItem.Name = "numérotationDesLignesToolStripMenuItem";
+            this.numérotationDesLignesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.numérotationDesLignesToolStripMenuItem.Text = "Line numbers";
+            // 
+            // itemMenuWithLine
+            // 
+            this.itemMenuWithLine.Checked = true;
+            this.itemMenuWithLine.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.itemMenuWithLine.Name = "itemMenuWithLine";
+            this.itemMenuWithLine.Size = new System.Drawing.Size(152, 22);
+            this.itemMenuWithLine.Text = "Yes";
+            this.itemMenuWithLine.Click += new System.EventHandler(this.itemMenuWithLine_Click);
+            // 
+            // itemMenuWithoutLine
+            // 
+            this.itemMenuWithoutLine.Name = "itemMenuWithoutLine";
+            this.itemMenuWithoutLine.Size = new System.Drawing.Size(152, 22);
+            this.itemMenuWithoutLine.Text = "No";
+            this.itemMenuWithoutLine.Click += new System.EventHandler(this.itemMenuWithoutLine_Click);
             // 
             // richTextBoxASM
             // 
@@ -94,39 +127,6 @@
             this.richTextBoxASM.TabIndex = 2;
             this.richTextBoxASM.Text = "";
             // 
-            // affichageToolStripMenuItem
-            // 
-            this.affichageToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.numérotationDesLignesToolStripMenuItem});
-            this.affichageToolStripMenuItem.Name = "affichageToolStripMenuItem";
-            this.affichageToolStripMenuItem.Size = new System.Drawing.Size(70, 20);
-            this.affichageToolStripMenuItem.Text = "Affichage";
-            // 
-            // numérotationDesLignesToolStripMenuItem
-            // 
-            this.numérotationDesLignesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.itemMenuWithLine,
-            this.itemMenuWithoutLine});
-            this.numérotationDesLignesToolStripMenuItem.Name = "numérotationDesLignesToolStripMenuItem";
-            this.numérotationDesLignesToolStripMenuItem.Size = new System.Drawing.Size(204, 22);
-            this.numérotationDesLignesToolStripMenuItem.Text = "Numérotation des lignes";
-            // 
-            // itemMenuWithLine
-            // 
-            this.itemMenuWithLine.Checked = true;
-            this.itemMenuWithLine.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.itemMenuWithLine.Name = "itemMenuWithLine";
-            this.itemMenuWithLine.Size = new System.Drawing.Size(152, 22);
-            this.itemMenuWithLine.Text = "Avec";
-            this.itemMenuWithLine.Click += new System.EventHandler(this.itemMenuWithLine_Click);
-            // 
-            // itemMenuWithoutLine
-            // 
-            this.itemMenuWithoutLine.Name = "itemMenuWithoutLine";
-            this.itemMenuWithoutLine.Size = new System.Drawing.Size(152, 22);
-            this.itemMenuWithoutLine.Text = "Sans";
-            this.itemMenuWithoutLine.Click += new System.EventHandler(this.itemMenuWithoutLine_Click);
-            // 
             // DisassemblerWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -137,7 +137,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "DisassemblerWindow";
-            this.Text = "Désassembleur";
+            this.Text = "Desassembler";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

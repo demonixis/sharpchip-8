@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(OpenTKRenderer));
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.labelEtatEmu = new System.Windows.Forms.ToolStripStatusLabel();
+            this.emuStateLabel = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fichierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openItemMenu = new System.Windows.Forms.ToolStripMenuItem();
@@ -79,7 +79,7 @@
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.labelEtatEmu});
+            this.emuStateLabel});
             this.statusStrip1.Location = new System.Drawing.Point(0, 286);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -89,10 +89,10 @@
             // 
             // labelEtatEmu
             // 
-            this.labelEtatEmu.Name = "labelEtatEmu";
-            this.labelEtatEmu.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.labelEtatEmu.Size = new System.Drawing.Size(31, 17);
-            this.labelEtatEmu.Text = "Stop";
+            this.emuStateLabel.Name = "labelEtatEmu";
+            this.emuStateLabel.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.emuStateLabel.Size = new System.Drawing.Size(31, 17);
+            this.emuStateLabel.Text = "Stop";
             // 
             // menuStrip1
             // 
@@ -468,7 +468,7 @@
         #endregion
 
         private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripStatusLabel labelEtatEmu;
+        private System.Windows.Forms.ToolStripStatusLabel emuStateLabel;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fichierToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem openItemMenu;

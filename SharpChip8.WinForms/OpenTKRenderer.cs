@@ -478,8 +478,7 @@ namespace SharpChip8.WinForms
             _chip8.ActiveSound = false;
         }
 
-        // Menu Debug
-        // --- Lancer le déboggeur
+        // Debug menu
         private void debugerItemMenu_Click(object sender, EventArgs e)
         {
             Debugger.DebugWindow debugger = new Debugger.DebugWindow(_chip8);
@@ -513,7 +512,7 @@ namespace SharpChip8.WinForms
         {
             _chip8.Cpu.Running = false;
             _chip8.Cpu.Reset();
-            this.labelEtatEmu.Text = "Emulation stopped";
+            this.emuStateLabel.Text = "Emulation stopped";
             Clear();
         }
 
@@ -523,7 +522,7 @@ namespace SharpChip8.WinForms
             {
                 _chip8.LoadRomFromFile(_romfile);
                 _chip8.Cpu.Running = true;
-                this.labelEtatEmu.Text = "Emulation started";
+                this.emuStateLabel.Text = "Emulation started";
             }
         }
 
@@ -532,7 +531,8 @@ namespace SharpChip8.WinForms
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Title = "Load a rom";
             openFileDialog.DefaultExt = "ch8";
-            openFileDialog.RestoreDirectory = true;
+            openFileDialog.RestoreDirectory = false;
+            openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
             openFileDialog.Filter = "Rom Chip-8 (*.ch8)|*.ch8|Rom Chip-8 (*.c8k)|*.c8k|All files (*.*)|*.*";
             openFileDialog.FilterIndex = 1;
 
@@ -542,10 +542,10 @@ namespace SharpChip8.WinForms
 
             openFileDialog.InitialDirectory = defaultSearchPath;
 
-            if (openFileDialog.ShowDialog(this) == System.Windows.Forms.DialogResult.OK)
+            if (openFileDialog.ShowDialog(this) == DialogResult.OK)
             {
                 _romfile = openFileDialog.FileName;
-                this.labelEtatEmu.Text = String.Format("Rom {0} loaded", openFileDialog.SafeFileName);
+                emuStateLabel.Text = String.Format("Rom {0} loaded", openFileDialog.SafeFileName);
             }
 
             if (_chip8.Cpu.Running)
@@ -556,7 +556,7 @@ namespace SharpChip8.WinForms
         {
             StopEmulation();
             _romfile = String.Empty;
-            this.labelEtatEmu.Text = "No rom loaded";
+            this.emuStateLabel.Text = "No rom loaded";
         }
 
         private void ChangeResolution(int pixelWidth, int pixelHeight)

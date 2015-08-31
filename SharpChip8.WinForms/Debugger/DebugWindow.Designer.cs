@@ -127,7 +127,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.outilsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.itemMenuQuit = new System.Windows.Forms.ToolStripMenuItem();
-            this.mémoireToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.memoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.itemDumpToText = new System.Windows.Forms.ToolStripMenuItem();
             this.itemDumpToBin = new System.Windows.Forms.ToolStripMenuItem();
@@ -159,7 +159,7 @@
             this.groupBox1.Size = new System.Drawing.Size(169, 449);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Registres";
+            this.groupBox1.Text = "Registers";
             // 
             // tableLayoutPanel1
             // 
@@ -501,7 +501,7 @@
             this.groupBox2.Size = new System.Drawing.Size(147, 91);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Pointeurs";
+            this.groupBox2.Text = "Pointers";
             // 
             // tableLayoutPanel2
             // 
@@ -595,9 +595,9 @@
             this.label20.AutoSize = true;
             this.label20.Location = new System.Drawing.Point(3, 26);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(26, 13);
+            this.label20.Size = new System.Drawing.Size(32, 26);
             this.label20.TabIndex = 1;
-            this.label20.Text = "Son";
+            this.label20.Text = "Sound";
             // 
             // textBoxCpuCounter
             // 
@@ -623,7 +623,7 @@
             this.groupBox4.Size = new System.Drawing.Size(147, 74);
             this.groupBox4.TabIndex = 5;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Pile";
+            this.groupBox4.Text = "Stack";
             // 
             // tableLayoutPanel4
             // 
@@ -647,9 +647,9 @@
             this.label21.AutoSize = true;
             this.label21.Location = new System.Drawing.Point(3, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(32, 13);
+            this.label21.Size = new System.Drawing.Size(27, 13);
             this.label21.TabIndex = 0;
-            this.label21.Text = "Taille";
+            this.label21.Text = "Size";
             // 
             // label22
             // 
@@ -658,7 +658,7 @@
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(45, 13);
             this.label22.TabIndex = 1;
-            this.label22.Text = "Adresse";
+            this.label22.Text = "Address";
             // 
             // textBoxStackCount
             // 
@@ -684,7 +684,7 @@
             this.groupBox6.Size = new System.Drawing.Size(240, 251);
             this.groupBox6.TabIndex = 7;
             this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Touches";
+            this.groupBox6.Text = "Keys";
             // 
             // flowLayoutPanel1
             // 
@@ -1046,7 +1046,7 @@
             this.groupBox7.Size = new System.Drawing.Size(240, 85);
             this.groupBox7.TabIndex = 8;
             this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "Processeur";
+            this.groupBox7.Text = "CPU";
             // 
             // textBoxCpuOpPSec
             // 
@@ -1073,16 +1073,16 @@
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(88, 13);
             this.label24.TabIndex = 1;
-            this.label24.Text = "Opérations / Sec";
+            this.label24.Text = "Operations / Sec";
             // 
             // label23
             // 
             this.label23.AutoSize = true;
             this.label23.Location = new System.Drawing.Point(6, 26);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(63, 13);
+            this.label23.Size = new System.Drawing.Size(51, 13);
             this.label23.TabIndex = 0;
-            this.label23.Text = "Attente (ms)";
+            this.label23.Text = "Wait (ms)";
             // 
             // tabPage2
             // 
@@ -1092,7 +1092,7 @@
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(668, 475);
             this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "Mémoire";
+            this.tabPage2.Text = "Memory";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // richTextBoxMemory
@@ -1113,7 +1113,7 @@
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(668, 475);
             this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Desassembleur";
+            this.tabPage3.Text = "Desassembler";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
             // richTextBoxDasm
@@ -1130,7 +1130,7 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.outilsToolStripMenuItem,
-            this.mémoireToolStripMenuItem});
+            this.memoryToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(677, 24);
@@ -1142,23 +1142,23 @@
             this.outilsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.itemMenuQuit});
             this.outilsToolStripMenuItem.Name = "outilsToolStripMenuItem";
-            this.outilsToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
-            this.outilsToolStripMenuItem.Text = "Fichier";
+            this.outilsToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.outilsToolStripMenuItem.Text = "File";
             // 
             // itemMenuQuit
             // 
             this.itemMenuQuit.Name = "itemMenuQuit";
             this.itemMenuQuit.Size = new System.Drawing.Size(152, 22);
-            this.itemMenuQuit.Text = "Quitter";
+            this.itemMenuQuit.Text = "Close";
             this.itemMenuQuit.Click += new System.EventHandler(this.buttonQuit_Click);
             // 
             // mémoireToolStripMenuItem
             // 
-            this.mémoireToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.memoryToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1});
-            this.mémoireToolStripMenuItem.Name = "mémoireToolStripMenuItem";
-            this.mémoireToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
-            this.mémoireToolStripMenuItem.Text = "Mémoire";
+            this.memoryToolStripMenuItem.Name = "mémoireToolStripMenuItem";
+            this.memoryToolStripMenuItem.Size = new System.Drawing.Size(64, 20);
+            this.memoryToolStripMenuItem.Text = "Memory";
             // 
             // toolStripMenuItem1
             // 
@@ -1167,20 +1167,20 @@
             this.itemDumpToBin});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
             this.toolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
-            this.toolStripMenuItem1.Text = "Dumper vers";
+            this.toolStripMenuItem1.Text = "Dump to";
             // 
             // itemDumpToText
             // 
             this.itemDumpToText.Name = "itemDumpToText";
             this.itemDumpToText.Size = new System.Drawing.Size(152, 22);
-            this.itemDumpToText.Text = "Fichier texte";
+            this.itemDumpToText.Text = "Text file";
             this.itemDumpToText.Click += new System.EventHandler(this.itemDumpToText_Click);
             // 
             // itemDumpToBin
             // 
             this.itemDumpToBin.Name = "itemDumpToBin";
             this.itemDumpToBin.Size = new System.Drawing.Size(152, 22);
-            this.itemDumpToBin.Text = "Fichier binaire";
+            this.itemDumpToBin.Text = "Binary file";
             this.itemDumpToBin.Click += new System.EventHandler(this.itemDumpToBin_Click);
             // 
             // DebugWindow
@@ -1194,7 +1194,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "DebugWindow";
-            this.Text = "Déboggeur";
+            this.Text = "Debugger";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.DebugWindow_FormClosing);
             this.groupBox1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -1287,7 +1287,7 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem outilsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem itemMenuQuit;
-        private System.Windows.Forms.ToolStripMenuItem mémoireToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem memoryToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem itemDumpToText;
         private System.Windows.Forms.ToolStripMenuItem itemDumpToBin;
